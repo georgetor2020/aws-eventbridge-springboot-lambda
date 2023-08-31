@@ -4,7 +4,7 @@ package com.brianeno.aws.controller;
  * @author brianeno
  */
 
-import com.brianeno.aws.data.InboundCase;
+import com.brianeno.aws.data.InboundSensor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,20 +20,20 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/")
-public class CaseController {
+public class SensorController {
 
-    @GetMapping(value = "case", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<InboundCase> getCase() {
-        return List.of(new InboundCase("123456", "New Case 1", "OPEN"),
-                new InboundCase("654321", "New Case 2", "PENDING"));
+    @GetMapping(value = "sensor", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<InboundSensor> getSensorInfo() {
+        return List.of(new InboundSensor("123456", "New Sensor Value 1", "OPEN"),
+                new InboundSensor("654321", "New Sensor Value 1", "PENDING"));
     }
 
-    @PutMapping(value = "case/{key}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> processCase(@PathVariable String key) {
+    @PutMapping(value = "sensor/{key}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> processSensorInfo(@PathVariable String key) {
         // parse key
         // read from S3 and process accordingly
         return new ResponseEntity<>(
-                "Processing Incoming EDI file " + key,
+                "Processing Incoming Sensor Info " + key,
                 HttpStatus.OK);
     }
 

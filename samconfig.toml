@@ -1,8 +1,8 @@
 version = 0.1
 [default.deploy.parameters]
-stack_name = "CaseApiFunction"
+stack_name = "SensorApiFunction"
 resolve_s3 = true
-s3_prefix = "CaseApiFunction"
+s3_prefix = "SensorApiFunction"
 region = "eu-west-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"

@@ -3,15 +3,15 @@ package com.brianeno.aws.data;
 /**
  * @author brianeno
  */
-public class InboundCase {
+public class InboundSensor {
 
     private String id;
-    private String caseName;
+    private String value;
     private String status;
 
-    public InboundCase(String id, String caseName, String status) {
+    public InboundSensor(String id, String value, String status) {
         this.id = id;
-        this.caseName = caseName;
+        this.value = value;
         this.status = status;
     }
 
@@ -23,12 +23,12 @@ public class InboundCase {
         this.id = id;
     }
 
-    public String getCaseName() {
-        return caseName;
+    public String getValue() {
+        return value;
     }
 
-    public void setCaseName(String caseName) {
-        this.caseName = caseName;
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public String getStatus() {

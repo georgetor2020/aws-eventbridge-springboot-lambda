@@ -6,7 +6,7 @@ Globals:
     Timeout: 30
 
 Resources:
-  CaseApiFunction:
+  SensorApiFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: .
@@ -22,13 +22,13 @@ Resources:
         Variables:
           JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1 # More info about tiered compilation https://aws.amazon.com/blogs/compute/optimizing-aws-lambda-function-performance-for-java/
       Events:
-        NewCaseEvent:
+        NewSensorEvent:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /api/v1/case/{key}
+            Path: /api/v1/sensor/{key}
             Method: PUT
-        GetCaseEvent:
+        GetSensorEvent:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /api/v1/case
+            Path: /api/v1/sensor
             Method: GET
