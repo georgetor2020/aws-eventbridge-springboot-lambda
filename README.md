@@ -21,7 +21,10 @@ This is a simple Java Spring Boot Lambda project that can be deployed as a AWS L
 mvn clean install
 ```
 
+### Test Endpoint
+(GET) http://localhost:8080/api/v1/sensor
 
+(PUT) http://localhost:8080/api/v1/sensor/123456
 
 ### Build Using SAM
 

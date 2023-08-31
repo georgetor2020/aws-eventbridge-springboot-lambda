@@ -23,13 +23,13 @@ import java.util.List;
 public class SensorController {
 
     @GetMapping(value = "sensor", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<InboundSensor> getSensorInfo() {
+    public List<InboundSensor> getSensor() {
         return List.of(new InboundSensor("123456", "New Sensor Value 1", "OPEN"),
                 new InboundSensor("654321", "New Sensor Value 1", "PENDING"));
     }
 
     @PutMapping(value = "sensor/{key}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> processSensorInfo(@PathVariable String key) {
+    public ResponseEntity<String> processSensor(@PathVariable String key) {
         // parse key
         // read from S3 and process accordingly
         return new ResponseEntity<>(

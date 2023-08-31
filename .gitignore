@@ -1,6 +1,6 @@
 # Compiled class file
 *.class
-
+.aws-sam
 # Log file
 *.log
 
