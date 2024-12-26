@@ -2,6 +2,8 @@
 
 This is a simple Java Spring Boot Lambda project that can be deployed as a AWS Lambda.
 
+URL: https://stackademic.com/blog/spring-boot-eventbridge
+
 ## Pre-requisites
 - Maven
 
